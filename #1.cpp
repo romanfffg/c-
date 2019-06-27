@@ -1,50 +1,28 @@
-#include <string.h>
-#include <string>
 #include <iostream>
-#include <cstdlib> // для system
+#include <string>
 using namespace std;
-
-int main()
-{
-//    char s[6] = {'a','e','o','u','i'};
-    int a = 0, e = 0, o = 0, u = 0, i = 0, y = 0;
-    string b;
-    getline(cin,b);
-	for (int z = 0; z < b.length(); z++) {
-		if (b[z] =='a') {
-    string bus;
-    getline(cin,bus);
-	for (int z = 0; z < bus.length(); z++) {
-		if (bus[z] =='a') {
-			a = a + 1;
+int main() {
+	string str;
+	int a=0, u=0, e=0, o=0, y=0, ii=0;
+	getline(cin, str);
+	for (int i=0; i<str.length(); i++) {
+		if (str[i]=='a') {
+			a++;
+		} else if (str[i]=='u') {
+			u++;
 		}
-		if(b[z] == 'e') {
-		if(bus[z] == 'e') {
-			e = e + 1;
+		if (str[i]=='e') {
+			e++;
+		} else if (str[i]=='o') {
+			o++;
 		}
-		if(b[z] == 'i') {
-		if(bus[z] == 'i') {
-			i = i + 1;
-		}
-		if (b[z] == 'o') {
-		if (bus[z] == 'o') {
-			o = o + 1;
-		}
-		if (b[z] == 'u') {
-		if (bus[z] == 'u') {
-			u = u + 1;
-		}
-		if (b [z] == 'y') {
-		if (bus[z] == 'y') {
-			y = y + 1;
+		if (str[i]=='y') {
+			y++;
+		} else if(str[i]=='i') {
+			ii++;
 		}
 	}
- @@ -33,7 +33,7 @@ int main()
-    cout << "o = " << o << endl;
-    cout << "u = " << u << endl;
-    cout << "i = " << i << endl;
-	//0
 
-    // system("pause"); // Только для тех, у кого MS Visual Studio
-    return 0;
+	cout<<" a="<<a<<" u="<<u<<" e="<<e<<" o="<<o<<" y="<<y<<" i="<<ii<<endl;
+	return 0;
 }
